@@ -71,6 +71,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-right: 1.5rem;
+
 }
 
 .navbar .navbar-section .navbar-section2 .navbar-city p {
@@ -84,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0.8rem;
+    /* margin: 0 0.8rem; */
 }
 
 .navbar .navbar-section .navbar-section2 .navbar-sign button {
@@ -103,31 +105,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 1.4rem;
+    margin-left: 1.4rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-
-/* ****************************************************************** */
-
-
-
-
-/* Category section  */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -138,7 +119,7 @@
 @media (max-width: 715px) {
     .navbar .navbar-section {
         width: 100%;
-        margin: 0 1rem;
+        padding: 0 1rem;
     }
 
 }
