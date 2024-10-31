@@ -9,7 +9,6 @@ import './carousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "@ant-design/react-slick";
-import { Autoplay } from 'swiper/modules';
 
 
 
@@ -29,7 +28,7 @@ const Carousel = () => {
   return (
     <div className='carousel'>
 
-      <Slider className='cards' {...settings}>
+      <Slider {...settings}>
         <div className='img-container'>
           <img src={img1} alt="image" />
         </div>
