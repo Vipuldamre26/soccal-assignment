@@ -35,12 +35,12 @@
 
 .slick-slider .slick-prev:before {
     font-size: 3rem;
-    color: rgba(0, 0, 0, 0.128);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .slick-slider .slick-next:before {
     font-size: 3rem;
-    color: rgba(0, 0, 0, 0.128);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel .slick-dots {
