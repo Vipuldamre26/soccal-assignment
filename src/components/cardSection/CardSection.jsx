@@ -6,12 +6,17 @@ import { FaAngleRight } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "@ant-design/react-slick";
+import { useSelector } from 'react-redux';
 
 
 
-const CardSection = () => {
+const CardSection = ({ category }) => {
 
   const [data, setData] = useState([]);
+  
+  const moviesData = useSelector(state => state.movieData.movies);
+  // console.log(moviesData);
+
 
 
   var settings = {
@@ -44,6 +49,7 @@ const CardSection = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -54,9 +60,9 @@ const CardSection = () => {
 
     async function fetchMovies() {
       try {
-        const res = await fetchData('movie');
+        const res = await fetchData(category);
         if (res && res.data && res.data.Search) {
-          console.log(res.data.Search);
+          // console.log(res.data.Search);
           
           setData(res.data.Search);
         }
@@ -65,8 +71,21 @@ const CardSection = () => {
       }
     }
 
-    fetchMovies();
-  }, []);
+      fetchMovies();
+
+  }, [category]);
+
+
+
+  useEffect(() => {
+
+    setData(moviesData);
+
+  }, [moviesData]);
+
+
+
+  
 
 
 
@@ -76,7 +95,7 @@ const CardSection = () => {
       <div className="card-main">
 
         <div className="card-main-upper">
-          <h2>Recommended Moives</h2>
+          <h2>Recommended {category}</h2>
           <span>See All <FaAngleRight /> </span>
         </div>
 

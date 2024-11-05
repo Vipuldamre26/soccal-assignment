@@ -39,7 +39,7 @@
 }
 
 .card-section .card-main .card-main-lower .slick-slider .slick-list{
-    height: 420px;
+    height: 67vmin;
 }
 
 .card-section .card-main .card-main-lower .slick-slider .slick-list .slick-track .slick-slide{
@@ -48,7 +48,7 @@
     justify-content: left;
     flex-direction: column;
     /* width: 220px; */
-    height: 30rem;
+    height: 100%;
     margin: 0 1rem;
     overflow: hidden;
 }
@@ -57,7 +57,7 @@
 
 .card-section .card-main .card-main-lower .slick-slider .slick-list .slick-track .slick-slide .card .img{
     width: 100%;
-    height: 22rem;
+    height: 100%;
     overflow: hidden;
     border-radius: 8px;
 }
