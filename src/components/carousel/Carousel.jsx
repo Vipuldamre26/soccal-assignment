@@ -11,6 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "@ant-design/react-slick";
 
 
+// ***********************************************************************
+
 
 const Carousel = () => {
 
@@ -20,9 +22,12 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,     
+    autoplay: true,
     autoplaySpeed: 3000,
   };
+
+
+// ***********************************************************************
 
 
   return (

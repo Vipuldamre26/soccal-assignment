@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const dataSlice = createSlice({
     name: 'fetchData',
     initialState: {
-        movies: []
+        movies: ''
     },
     reducers: {
         setData: (state, action) => {
@@ -11,7 +11,7 @@ const dataSlice = createSlice({
             state.movies = action.payload;
         },
         getData: (state) => {
-            return state; 
+            return state;
         }
     }
 })

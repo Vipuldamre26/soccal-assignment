@@ -6,19 +6,19 @@ import { FaAngleRight } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "@ant-design/react-slick";
-import { useSelector } from 'react-redux';
 import { Skeleton } from '@mui/material';
 
 
 
 const CardSection = ({ category }) => {
 
+
+  // hooks
   const [data, setData] = useState([]);
 
-  const moviesData = useSelector(state => state.movieData.movies);
-  // console.log(moviesData);
 
 
+  // ***********************************************************************
 
   var settings = {
     dots: true,
@@ -57,6 +57,9 @@ const CardSection = ({ category }) => {
   };
 
 
+  // ***********************************************************************
+
+
   useEffect(() => {
 
     async function fetchMovies() {
@@ -78,17 +81,7 @@ const CardSection = ({ category }) => {
 
 
 
-  useEffect(() => {
-
-    setData(moviesData);
-
-  }, [moviesData]);
-
-
-
-
-
-
+  // ***********************************************************************
 
 
   return (

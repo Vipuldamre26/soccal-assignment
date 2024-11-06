@@ -1,4 +1,4 @@
-.footer{
+.footer {
     background-color: #333338;
     height: 16rem;
     display: flex;
@@ -7,24 +7,23 @@
     flex-direction: column;
     padding: 5vmin;
     color: #6d6d71;
-    
 }
 
-.footer .footer-upper{
+.footer .footer-upper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 98%;
 }
 
-.footer .footer-upper .side{
+.footer .footer-upper .side {
     height: 1px;
     background-color: #5a5a5f;
     width: 44%;
     margin: 0 1.4rem;
 }
 
-.footer .footer-lower{
+.footer .footer-lower {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +31,6 @@
     font-size: 0.8rem;
 }
 
-.footer .footer-lower p{
+.footer .footer-lower p {
     text-align: center;
 }
-

@@ -2,7 +2,7 @@ import React from 'react';
 import './category.css';
 
 const Category = ({ setCategory }) => {
-  
+
   return (
     <div className='category'>
       <div className="category-section">

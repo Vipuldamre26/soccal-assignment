@@ -6,31 +6,33 @@ import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { BsList } from "react-icons/bs";
 import { setData } from '../../redux/slices/dataSlice';
-import fetchData from '../../utilities/fetchData';
 
 
 const Navbar = () => {
 
-  const [data, setMovieData] = useState('');
 
+  // Hooks 
+  const [data, setMovieData] = useState('');
   const dispatch = useDispatch();
 
+
+  // ***********************************************************************
+
+
+
+  // function 
   const onHandleClick = async () => {
 
     try {
-      const res = await fetchData(data);
-      if (res && res.data && res.data.Search) {
-        // console.log(res.data.Search);
+      dispatch(setData(data));
 
-        dispatch(setData(res.data.Search));
-      }
     } catch (error) {
       console.log("Error fetching movies:", error);
     }
   }
 
 
-
+  // ***********************************************************************
 
   return (
 

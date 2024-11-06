@@ -11,11 +11,11 @@ async function fetchData(query) {
         const data = await axios.get(apiURL);
         return data;
     }
-    catch(error){
+    catch (error) {
         console.log(error);
-        
+
     }
-    
+
 }
 
 export default fetchData;
