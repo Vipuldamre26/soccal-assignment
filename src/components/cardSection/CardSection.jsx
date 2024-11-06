@@ -7,13 +7,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "@ant-design/react-slick";
 import { useSelector } from 'react-redux';
+import { Skeleton } from '@mui/material';
 
 
 
 const CardSection = ({ category }) => {
 
   const [data, setData] = useState([]);
-  
+
   const moviesData = useSelector(state => state.movieData.movies);
   // console.log(moviesData);
 
@@ -47,7 +48,7 @@ const CardSection = ({ category }) => {
       {
         breakpoint: 480, // Screen width of 480px or less (Mobile)
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: false,
         },
@@ -63,7 +64,7 @@ const CardSection = ({ category }) => {
         const res = await fetchData(category);
         if (res && res.data && res.data.Search) {
           // console.log(res.data.Search);
-          
+
           setData(res.data.Search);
         }
       } catch (error) {
@@ -71,7 +72,7 @@ const CardSection = ({ category }) => {
       }
     }
 
-      fetchMovies();
+    fetchMovies();
 
   }, [category]);
 
@@ -85,7 +86,7 @@ const CardSection = ({ category }) => {
 
 
 
-  
+
 
 
 
@@ -105,16 +106,20 @@ const CardSection = ({ category }) => {
               data.length > 0 ? (
                 data.map((card) => (
                   <div className="card" key={card.imdbID}>
-                    {/* <p>{card.Title}</p> */}
                     <div className="img">
-                    <img src={card.Poster} alt={card.Title} />
+                      {
+                        card.Poster !== 'N/A' ? <img src={card.Poster} alt={card.Title} /> : <Skeleton variant="rounded" animation="wave" width={240} height={380} />
+                      }
                     </div>
                     <h3>{card.Title}</h3>
                     <p>{card.Type}</p>
                   </div>
                 ))
               ) : (
-                <p>Loading movies...</p>
+                Array.from(new Array(5)).map((_, index) => (
+                  <Skeleton key={index} variant="rounded" animation="wave" width={240} height={380} />
+
+                ))
               )
             }
           </Slider>
